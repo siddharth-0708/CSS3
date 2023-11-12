@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'sidFont1';
+    src: url('/fonts/Roboto-Black.ttf') format('truetype'),
+    /* Additional font properties can be set here */
+}
+@font-face {
+    font-family: 'sidFont2';
+    src: url('/fonts/Roboto-BlackItalic.ttf') format('truetype'),
+    /* Additional font properties can be set here */
+}
+div{
+    background-color: brown;
+    font-family: 'YourCustomFont', serif;
+    color: aliceblue;
+}
+p{
+    font-family: 'YourCustomFont', serif;
+    color: pink;
+}

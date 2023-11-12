@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Siddharth Basic</title>
+        <link rel="stylesheet" href="/basic.css">
+    </head>
+    <body id="body">
+        <div class = "1" id = "sid" lol = "me" onclick="elementClicked()">
+            Hello world!!!!
+        </div>
+        <script>
+            caches.open('siddharthCache')
+            .then(cache => {
+                // Add resources to the cache
+                cache.addAll([
+                'https://employeedetails.free.beeceptor.com/my/api/path'
+                ]);
+            });
+
+            let ele = document.getElementsByClassName('1');
+            console.log(ele);
+
+            function elementClicked(){
+                console.log("element clicked 444");
+
+                caches.match('https://employeedetails.free.beeceptor.com/my/api/path')
+                .then(response => {
+                    if (!response.ok) {
+                    // Resource not found in cache, fetch from network
+                    console.log("Not found in cache");
+                    fetch('https://employeedetails.free.beeceptor.com/my/api/path')
+                    .then(response => {
+                        if (!response.ok) {
+                        throw new Error('Network response was not ok.');
+                        }
+                        return response.text(); // Getting the response as text
+                    })
+                    .then(html => {
+                        // Work with the fetched HTML content
+                        //console.log(html); // Log the HTML content
+                        document.getElementById('body').innerHTML = html;
+                    })
+                    .catch(error => {
+                        // Handle any errors that occurred during the fetch
+                        console.error('Fetch error:', error);
+                    });
+                    }
+                    return response.text();;
+                })
+                .then(html => {
+                    console.log("found in cache");
+                    document.getElementById('body').innerHTML = html;
+                })
+            }
+        </script>
+                <link rel="stylesheet" href="/basic.css">
+    </body>
+</html>

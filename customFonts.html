@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Siddharth Basic</title>
+        <link rel="stylesheet" href="/basic.css">
+    </head>
+    <body id="body">
+        <div>
+            Hello world!!!!
+        </div>
+        <p>
+            zzzzzzzzzzzzzzzzzzzzzzzzzz!!!
+        </p>
+        <script>
+            setTimeout(() => {
+                const customFont = new FontFace('YourCustomFont', 'url(/fonts/Caveat-Medium.ttf)');
+
+                customFont.load().then(function(loadedFont) {
+                //document.fonts.add(loadedFont);
+                // Font has been loaded, now add the CSS file
+                // const cssLink = document.createElement('link');
+                // cssLink.rel = 'stylesheet';
+                // cssLink.href = '/basic.css'; // Path to your CSS file
+
+                // // Append the link to the document's head
+                // document.head.appendChild(cssLink);
+                });
+            }, 2000);
+        </script>
+    </body>
+</html>
+
+<!--  How custom fonts work after browser loads it
+    When you load a custom font using the FontFace API and apply it in your CSS, the browser knows to update the font for specific elements because of the CSS style changes you've made.
+
+Here's how it works:
+
+1. **Font Loading:** The FontFace API allows you to load and define custom fonts programmatically in the browser. When you load a font using this API, you're indicating to the browser that you intend to use this font in your document.
+
+2. **CSS Styling:** In your CSS, when you update the `font-family` property for certain elements to use the loaded custom font, you're explicitly instructing the browser to change the font style for those elements. For example:
+   ```css
+   body {
+     font-family: 'YourCustomFont', sans-serif;
+   }
+   ```
+
+3. **Rendering Update:** When the browser encounters these CSS updates, it understands that the specified HTML elements (e.g., `body`, `h1`) are now intended to be displayed using the loaded custom font. The browser then updates the rendering of these specific elements to apply the new font styling.
+
+The changes you make in the CSS directly inform the browser about the intended font styles for the specified elements. The browser then re-renders those elements according to the updated CSS rules, resulting in the display of text using the newly loaded custom font.
+ -->
