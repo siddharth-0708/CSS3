@@ -1,0 +1,32 @@
+/* *{
+    color: red;
+} */
+#id {
+    color: slateblue;
+}
+div {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* background-color: blueviolet; */
+    color: blue;
+}
+.name{
+    color: yellow;
+}
+
+.div h2 {
+    color: green;
+}
+
+h2{
+    color: burlywood;
+}
+
+[onclick]{
+    color: orangered;
+}
+[abc]{
+    color: palevioletred;
+}
+[dummyAttribute]{
+    color: black;
+}
