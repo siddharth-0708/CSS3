@@ -1,0 +1,64 @@
+.parent {
+    display: inline-block;
+    border: 2px solid blue;
+    width: 90%;
+}
+.one {
+    display: inline-block;
+    margin: 10px;
+    font-size: 28px;
+    border: 1px solid red;
+    vertical-align: middle;
+}
+.two {
+    display: inline-block;
+    margin: 30px;
+    border: 1px solid red;
+    width: calc(100% - 250px);
+    text-align: right;
+    vertical-align: middle;
+}
+.three {
+    margin: 10px;
+    border: 1px solid green;
+}
+span {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+.two span {
+    /* color: yellow; */
+}
+.span1 ~ span {
+    color: yellow;
+}
+span:hover {
+    color: blueviolet;
+}
+.two span:hover, .parent .one:hover{
+    color: green;
+}
+.two span:active, .parent .one:active{
+    color: darkorange;
+}
+.two span::after, .parent .one::after{
+    content: '(hahaha)';
+}
+div h5:nth-child(-n + 3)~p {
+    color: gold;
+}
+div h5:nth-last-child(100n){
+    color: gold;
+}
+div.combined{
+    color: blue;
+}
+.combined p {
+    color: blue;
+}
+#two{
+    color: brown;
+}
+
+/* 3, 2, 1*/
