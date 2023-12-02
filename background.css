@@ -1,0 +1,20 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.backgroundParent{
+    width: 50%;
+    height: 50%;
+    border: 2px solid red;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/image1.webp);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    object-fit: cover;
+    /* background-position: center center; (x and y axis) */
+    /*it means you want the center-center corner of the background image to align with the center-center corner of the element. */
+    background-position: 0% 50%; /* meaning in x axis nothing is hidden and in y axis, 50% is hidden at top. 0% 100% means all parts are hidden above y axis. It will work only if some in cover it is unable to fit entire image*/
+}

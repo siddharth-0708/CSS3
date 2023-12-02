@@ -1,0 +1,76 @@
+Q) how can child take height in percentage if the parent has min-height?
+A) When the parent has min-height set, and you want the child to take a percentage height relative to that min-height, you can use the height property on the child element and specify the percentage value. The percentage will be calculated based on the specified min-height of the parent.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Percentage Height Example</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      min-height: 200px; /* Set your desired min-height for the parent */
+      background-color: lightgray;
+    }
+
+    .child {
+      height: 50%; /* 50% of the min-height of the parent */
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="child">
+      <!-- Your child content goes here -->
+    </div>
+  </div>
+</body>
+</html>
+
+When the parent has min-height set, and you want the child to take a percentage height relative to that min-height, you can use the height property on the child element and specify the percentage value. The percentage will be calculated based on the specified min-height of the parent.
+
+Here's an example:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Percentage Height Example</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    .container {
+      min-height: 200px; /* Set your desired min-height for the parent */
+      background-color: lightgray;
+    }
+
+    .child {
+      height: 50%; /* 50% of the min-height of the parent */
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="child">
+      <!-- Your child content goes here -->
+    </div>
+  </div>
+</body>
+</html>
+In this example:
+
+.container has a min-height of 200px.
+.child has a height of 50%, which means it will take up 50% of the min-height of its parent.
+Adjust the percentage value to suit your specific layout requirements. Keep in mind that percentages for height are calculated relative to the height of the containing block, so the parent's min-height serves as the reference in this case.
