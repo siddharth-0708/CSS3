@@ -2,6 +2,129 @@ html, body {
     width: 100%;
     height: 100%;
 }
-.grid-Parent{
+.container {
+    /* width: 100%;
+    height: 100%; */
+    margin: 20px;
+    display: grid;
+    grid-template-columns: [line-one]4fr [line-two-start line-two-end]1fr [line-three-start line-three-end]1fr [line-four-start line-four-end]2fr [line-five];
+    grid-template-rows: 2fr 4fr 3fr 20px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    /* grid-template-areas: "row1col1 row1col2 row1col3 row1col4 row1col5" "row2col1 row2col2 row2col3 row2col4 row2col5" "row3col1 row3col2 row3col3 row3col4 row3col5" "row4col1 row4col2 row4col3 row4col4 row4col5"; */
+    grid-template-areas: "ele1 ele1 ele1 ele1 row1col5" 
+                         "ele1 ele1 ele1 ele1 row2col5" 
+                         "ele1 ele1 ele1 ele1 row3col5" 
+                         "ele1 ele1 ele1 ele1 row4col5";
+    /* justify-items: center;
+    align-items: center;                      */
+}
+.container1 {
+    /* width: 100%;
+    height: 100%; */
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 65%);
+    display: none;
+    /* grid-template-rows: 2fr 4fr 3fr 20px; */
+}
+.container2 {
+    /* width: 100%;
+    height: 100%; */
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    display: none;
+    /* grid-template-rows: 2fr 4fr 3fr 20px; */
+}
 
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4; */
+    /* grid-area: 1 / 1 / 4 / 4; */
+    /* grid-area: row1col1 / row1col1 / row4col1/ row1col4 ; */
+    grid-area: ele1 ;
+    /* aspect-ratio: 1; */
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+    /* grid-row-start: 2;
+    grid-row-end: 5; */
+    grid-area: row3col5 / row3col5 / row4col5 / row4col5;
+    background-image: url("./images/image1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: 1;
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+}
+.el5 {
+    background: rgba(150, 35, 60, 0.5);
+}
+
+.el6 {
+    background: rgba(255, 250, 70, 0.5);
+}
+
+.el7 {
+    background: rgba(0, 108, 100, 0.5);
+}
+.el8 {
+    background: blue;
+    /* overflow: scroll; */
+}
+
+.el9 {
+    background: rgba(143, 139, 23, 0.5);
+}
+
+.el10 {
+    background: rgba(32, 39, 39, 0.5);
+}
+
+.el11 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el21 {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.el31 {
+    background: rgba(0, 128, 0, 0.5);
+}
+
+.el41 {
+    background: rgba(0, 4, 255, 0.5);
+}
+
+.el111 {
+    background: rgba(255, 154, 72, 0.5);
+    width: 50%;
+}
+
+.el211 {
+    background: rgba(255, 0, 0, 0.5);
+    width: 50%;
+}
+
+.el311 {
+    background: rgba(0, 128, 0, 0.5);
+    width: 50%;
+}
+
+.el411 {
+    background: rgba(0, 4, 255, 0.5);
+    width: 50%;
 }
