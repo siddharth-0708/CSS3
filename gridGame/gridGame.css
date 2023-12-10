@@ -17,19 +17,22 @@ html, body {
     max-width: 480px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
     grid-template-areas: "betOnAll" 
                          "betSpots"
                          "chips";
     box-sizing: border-box;
     justify-items: center;
     align-items: center;
+    @media screen and (min-width: 480px) {
+        width: 80%;
+    }
 }
 .grid-container {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
     grid-template-areas: "ele1 ele2 ele3" 
                          "ele4 ele5 ele6" 
                          "ele7 ele8 ele9";
